@@ -8,7 +8,7 @@
   <title>Recipes</title>
 
   <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="static/style.css"> -->
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -20,66 +20,49 @@
         <p>Select the type of dish, then the recipe</p>
       </div>
     </div>
+  </div>
+  <div style = "width: 15%; float:left">
+    <center>
+    <h5>Type of Dish</h5>
+    <select id="selType"  onchange="typeChange()">
+    <option disabled="disabled" selected="selected">Select a dish type</option>
+    </select> 
+
+    <br><br><br>
+
+    <h5>Recipe</h5>
+    <select id="selRecipe" onchange="updateRecipe(this.value)">
+    <option disabled="disabled" selected="selected">Select a recipe</option>
+    </select></center>
+  </div>
+
+  <!-- The div that displays recipe -->
+
+  <div id="body2" style = 'width: 30%; float:left; border:thin'>
+    <center>
+      Ingredients
+    </center>
+    <br><br>
+    <div>
+      <ul id="ingredients">
+
+      </ul>
     </div>
-  <!-- The div that holds our map -->
-  <table>
-    <tr>
-      <td><div style = "width: 400px;">
-        <center>
-          
-        
-        <h5>Type of Dish</h5>
-        <select id="selType"  onchange="yearChange()">
-          <option disabled="disabled" selected="selected">Select a dish type</option>
-          <option>Cookie</option>
-          <option>Brownie</option>
-          <option>Sheet Cake</option>
-          <option>Pie</option>
-          <option>Savory</option>
-          <option>Scone</option>
-          <option>Yeast Items</option>
-        </select> 
-        <br><br><br>
-        <h5>Recipe</h5>
-        <select id="selDisaster" onchange="updateDisaster(this.value)">
-          <option disabled="disabled" selected="selected">Select a disaster</option>
-          <option>Fire</option>
-          <option>Hurricane</option>
-        </select>
-        <br><br><br>
-        <h5>State Selection</h5>
-        <select id="selState" onchange="stateChange()">
-          <option disabled="disabled" selected="selected">Select a state</option>
-        </select></center>
-      </div></td>
+  </div>
 
-  <!-- The div that holds our scatter -->
-      <td>
-        <figure class = "highcharts-figure">
-          <div id="pie" style = 'width: 500px;'></div>
-        </figure>
-      </td>
-      <td>
-        <div id="plot" style = "width: 1000px;"></div>
-      </td>
-    </table>
+  <div id="body3" style = "width: 55%; float:right">
+    <center>Instructions</center><br><br>
+    <div>
+      <ol id="instructions">
+
+      </ol>
+    </div>
+  </div>
  
-  <!-- The div that holds our plot -->
-      <div class = 'center' id="map"></div>  
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <!-- API key -->
-  <!-- <script type="text/javascript" src="static/js/config.js"></script> -->
-  <!-- Our JavaScript -->
-  <!-- <script src="static/disasterData.js"></script> -->
-  <script src="static/yearData.js"></script>
-  <script src="static/tractorBeam.js"></script>
-  <script type="text/javascript" src="static/disasters.js"></script>
+  <!-- Javascript Source -->
+  <script src="recipebook.js"></script>
 
 </body>
 
