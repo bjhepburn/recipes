@@ -63,11 +63,17 @@ d3.json(url).then(response => {
         let numbers = [0,1,2,3,4,5,6,7,8,9]
         for (let i = 0; i < ingredientArray.length; i++) {
             let li = document.createElement('li');
-            console.log(ingredientArray[i],ingredientArray[i][0])
-            // if (li[0] in numbers) {
-            li.innerHTML = ingredientArray[i];
-            list.appendChild(li)
-            // }
+                console.log(ingredientArray[i],ingredientArray[i][0])
+                li.innerHTML = ingredientArray[i];
+                // if (ingredientArray[i][0] in numbers) {
+                //     li.style.color='black'}
+                //     else{
+                //         li.style.color='red'
+                //     }
+                list.appendChild(li)
+            
+            
+            
         }
         let list2 = document.getElementById("instructions")
         for (let i = 0; i < instructionArray.length; i++) {
