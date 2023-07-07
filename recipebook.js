@@ -2,13 +2,11 @@ const url = "https://bjhepburn.github.io/recipes/recipes.js"
 
 d3.json(url).then(response => {
     let recipes = response;
-    console.log(recipes);
     let typeList = [];
     for (let i = 0; i < recipes.length; i++){
         typeList.push(recipes[i]['type'])
         };
     typeList = [... new Set(typeList)]
-    console.log(typeList)
 
     let typeSelect = document.getElementById('selType');
     for (let i = 0; i < typeList.length; i++) {
@@ -30,7 +28,6 @@ d3.json(url).then(response => {
     function updateRecipes(type) {
         let recipeArray = [];
         for (let i = 0; i < recipes.length; i++) {
-            console.log(recipes[i]['name'])
             if (recipes[i]['type'] == type) {
                 recipeArray.push(recipes[i]['name']);
             }
@@ -53,7 +50,6 @@ d3.json(url).then(response => {
     }
 
     function updateDisplay(recipe) {
-        console.log(recipe)
 
         let ingredientArray = [];
         let instructionArray = [];
@@ -63,22 +59,21 @@ d3.json(url).then(response => {
                 instructionArray = recipes[i].directions
             }
         }
-        console.log(ingredientArray);
         let list = document.getElementById("ingredients")
+        let numbers = [0,1,2,3,4,5,6,7,8,9]
         for (let i = 0; i < ingredientArray.length; i++) {
-            console.log(ingredientArray[i])
             let li = document.createElement('li');
+            console.log(ingredientArray[i],ingredientArray[i][0])
+            // if (li[0] in numbers) {
             li.innerHTML = ingredientArray[i];
             list.appendChild(li)
-            console.log(li)
+            // }
         }
         let list2 = document.getElementById("instructions")
         for (let i = 0; i < instructionArray.length; i++) {
-            console.log(instructionArray[i])
             let li = document.createElement('li');
             li.innerHTML = instructionArray[i];
             list2.appendChild(li)
-            console.log(li)
         }
     }
 

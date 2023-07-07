@@ -4,7 +4,7 @@
         "type": "cookie",
         "ingredients": [
             "cup sugar",
-            " cup flour"
+            "cup flour"
         ],
         "directions": [
             "preheat",
@@ -16,8 +16,8 @@
         "type": "brownie",
         "ingredients": [
             "cocoa",
-            " flour",
-            " butter"
+            "flour",
+            "butter"
         ],
         "directions": [
             "mix",
@@ -44,11 +44,11 @@
         "type": "yeasted",
         "ingredients": [
             "1 cup warm milk",
-            " 2 1/2 tsp instant dry yeast",
-            " 2 large eggs(room temp)",
-            " 1/3 cup melted butter",
-            " 1/2 cup granulated sugar",
-            " 4 cups all-purpose flour"
+            "2 1/2 tsp instant dry yeast",
+            "2 large eggs(room temp)",
+            "1/3 cup melted butter",
+            "1/2 cup granulated sugar",
+            "4 cups all-purpose flour"
         ],
         "directions": [
             "Pour warm milk in mixing bowl and sprinkle with yeast. Wait 10 minutes.",
