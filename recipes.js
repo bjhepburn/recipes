@@ -8,7 +8,7 @@
         ],
         "directions": [
             "preheat",
-            " bake"
+            "bake"
         ]
     },
     {
@@ -21,8 +21,8 @@
         ],
         "directions": [
             "mix",
-            " bake",
-            " eat"
+            "bake",
+            "eat"
         ]
     },
     {
@@ -52,8 +52,7 @@
         ],
         "directions": [
             "Pour warm milk in mixing bowl and sprinkle with yeast. Wait 10 minutes.",
-            "Add eggs'",
-            "' butter and sugar. Mix until combined.",
+            "Add eggs butter and sugar. Mix until combined.",
             "Add flour and mix until combined- let stand 5 minutes.",
             "Knead with dough hook until sticky dough forms.",
             "Put into greased bowl; cover in plastic wrap; let rise 1 hour in oven."
