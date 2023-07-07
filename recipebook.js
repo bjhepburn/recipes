@@ -65,11 +65,11 @@ d3.json(url).then(response => {
             let li = document.createElement('li');
                 console.log(ingredientArray[i],ingredientArray[i][0])
                 li.innerHTML = ingredientArray[i];
-                // if (ingredientArray[i][0] in numbers) {
-                //     li.style.color='black'}
-                //     else{
-                //         li.style.color='red'
-                //     }
+                if (ingredientArray[i][0] in numbers) {
+                    li.style.color='black'}
+                    else{
+                        li.style.color='red'
+                    }
                 list.appendChild(li)
             
             
