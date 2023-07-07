@@ -26,7 +26,12 @@ d3.json(url).then(response => {
     }
 
     function updateRecipes(type) {
-        let recipeArray = [];
+        let recipeArray = ['Select a recipe'];
+        document.getElementById("selRecipe").innerHTML='Select a recipe';
+
+        // for (a in oldList.options) {
+        //     oldList.options.remove(0)
+        // } 
         for (let i = 0; i < recipes.length; i++) {
             if (recipes[i]['type'] == type) {
                 recipeArray.push(recipes[i]['name']);
@@ -50,6 +55,14 @@ d3.json(url).then(response => {
     }
 
     function updateDisplay(recipe) {
+        oldIng = document.getElementById("ingredients")
+        while (oldIng.firstChild){
+            oldIng.removeChild(oldIng.firstChild)
+        }
+        oldDir = document.getElementById("instructions")
+        while (oldDir.firstChild){
+            oldDir.removeChild(oldDir.firstChild)
+        }
 
         let ingredientArray = [];
         let instructionArray = [];
@@ -69,12 +82,11 @@ d3.json(url).then(response => {
                     li.style.color='black'}
                     else{
                         li.style.color='red'
+                        li.style.fontSize='18px'
                     }
                 list.appendChild(li)
-            
-            
-            
         }
+
         let list2 = document.getElementById("instructions")
         for (let i = 0; i < instructionArray.length; i++) {
             let li = document.createElement('li');
